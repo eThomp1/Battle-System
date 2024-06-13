@@ -13,8 +13,9 @@ namespace Battle_System.Classes.Entities
         protected int hp;
         protected int mp;
         protected string name;
-
+        protected int mana;
         protected int strength;
+        protected int dexterity;
         protected float accuracy;
 
         private Inventory inventory;

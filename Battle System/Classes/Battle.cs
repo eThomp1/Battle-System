@@ -41,6 +41,18 @@ namespace Battle_System.Classes
                 Console.WriteLine($"you have {player.GetHp()} health");
 
                 Console.ReadLine();
+               
+                if (player.GetHp()==0)
+                {
+                    Console.WriteLine("The Enemy has Won");
+                    over = true;
+                }
+                if (enemy.GetHp()==0)
+                {
+                    Console.WriteLine("You have Won");
+                    over = true;
+                }
+                
             }
         }
     }

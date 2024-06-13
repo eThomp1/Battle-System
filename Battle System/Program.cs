@@ -30,13 +30,21 @@ namespace Battle_System
 
             string playerClassChoice = OptionCheck("Select your class from the list below:\n" +
                 "1: Fighter\n" +
-                "2: Not Implemented\n" +
-                "3: Not Implemented", 
-                new string[] { "1" });
+                "2: Mage\n" +
+                "3: Archer", 
+                new string[] { "1","2","3" });
 
             if (playerClassChoice == "1")
             {
                 player = new Fighter(playerName);
+            }
+            else if (playerClassChoice == "2")
+            {
+                player = new Mage(playerName);
+            }
+            else if (playerClassChoice == "3")
+            {
+                player = new Archer(playerName);
             }
 
             return player;

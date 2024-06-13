@@ -31,8 +31,43 @@ namespace Battle_System.Classes.Entities
         public Fighter(string name) : base(name) 
         {
             strength = 5;
+            mana = 1;
+            dexterity = 3;
             ClassName = "Fighter";
             EquipItem(new Weapon("sword", "a basic sword", 1));
+        }
+    }
+    public class Mage : Player
+    {
+        public Mage(string name) : base(name)
+        {
+            strength = 1;
+            mana = 5;
+            dexterity = 3;
+            ClassName = "Mage";
+            EquipItem(new Weapon("staff", "a simple staff", 1));
+        }
+    }
+    public class Archer : Player
+    {
+        public Archer(string name) : base(name)
+        {
+            strength = 1;
+            mana = 3;
+            dexterity=5;
+            ClassName = "Archer";
+            EquipItem(new Weapon("bow", "a basic bow", 1));
+        }
+    }
+    public class God : Player
+    {
+        public God(string name) : base(name)
+        {
+            strength = 5;
+            mana = 5;
+            dexterity = 5;
+            ClassName = "God";
+            EquipItem(new Weapon("op", "litteral op weapon", 1));
         }
     }
 }
